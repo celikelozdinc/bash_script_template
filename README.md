@@ -1,4 +1,4 @@
-# Resources
+# References
 
 [Minimal Bash Script Template](https://medium.com/better-programming/my-minimal-safe-bash-script-template-300759114040)
 
