@@ -35,5 +35,6 @@ clean_exited_containers() {
     echo "Cleaning exited docker containers : "
     sleep 1
     docker ps -aq | awk '{print $1}' | xargs docker rm -f
+    #docker container prune
     echo "*************************************"
 }
