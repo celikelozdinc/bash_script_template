@@ -38,3 +38,12 @@ clean_exited_containers() {
     #docker container prune
     echo "*************************************"
 }
+
+empty_trash() {
+    echo "********************"
+    echo "Will empty trash :"
+    # Needs `sudo apt install -y trash-cli`
+    # https://github.com/andreafrancia/trash-cli
+    trash-empty 7
+    echo "********************"
+}

@@ -34,10 +34,12 @@ docker_resource_usage_report
 echo "Pruning docker build cache..."
 docker builder prune --all --force
 
-# # Clean exited docker containers if any
+# Clean exited docker containers if any
 if [ "$(docker ps -aq)" ]; then
     clean_exited_containers
 fi
 
+# Empty trash
+empty_trash
 
 disk_usage_report "AFTER"
