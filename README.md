@@ -9,3 +9,5 @@
 [Sending desktop notifications](https://opensource.com/article/22/1/linux-desktop-notifications)
 
 [Disabling ShellCheck controls](https://medium.com/mkdir-awesome/the-ultimate-guide-to-modularizing-bash-script-code-f4a4d53000c2)
+
+[I/O Redirection](https://medium.com/techtofreedom/5-levels-of-handling-i-o-redirection-in-linux-f27a88c10df4)

@@ -1,0 +1,30 @@
+Execution on Paz 03 Tem 2022 21:19:50 +03
+Disk usage report BEFORE housekeeping activities: 
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           1,6G  2,4M  1,6G   1% /run
+/dev/nvme0n1p5  147G   95G   45G  68% /
+tmpfs           7,8G  544M  7,3G   7% /dev/shm
+tmpfs           5,0M  4,0K  5,0M   1% /run/lock
+tmpfs           4,0M     0  4,0M   0% /sys/fs/cgroup
+/dev/nvme0n1p1   96M   31M   66M  32% /boot/efi
+tmpfs           1,6G  3,7M  1,6G   1% /run/user/1000
+*****************************************************
+*****************************************************
+Printing docker resource state : 
+TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          3         1         31.45GB   1.402GB (4%)
+Containers      1         0         1.905GB   1.905GB (100%)
+Local Volumes   1         0         1.042GB   1.042GB (100%)
+Build Cache     0         0         0B        0B
+*****************************************************
+*****************************************************
+Disk usage report AFTER housekeeping activities: 
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           1,6G  2,4M  1,6G   1% /run
+/dev/nvme0n1p5  147G   95G   45G  68% /
+tmpfs           7,8G  548M  7,3G   7% /dev/shm
+tmpfs           5,0M  4,0K  5,0M   1% /run/lock
+tmpfs           4,0M     0  4,0M   0% /sys/fs/cgroup
+/dev/nvme0n1p1   96M   31M   66M  32% /boot/efi
+tmpfs           1,6G  3,7M  1,6G   1% /run/user/1000
+*****************************************************

@@ -9,24 +9,29 @@ smooth_exit() {
 
 
 docker_resource_usage_report() {
-    echo "*********************************"
-    echo "Printing docker resource state : "
+    log="${1}"
+    echo "*****************************************************" | tee --append "${log}"
+    echo "Printing docker resource state : " | tee --append "${log}"
     sleep 1
-    docker system df
-    echo "*********************************"
+    docker system df >> "${log}" 2>&1
+    echo "*****************************************************" | tee --append "${log}"
 }
 
 disk_usage_report() {
     when="${1}"
-    echo "*****************************************************"
-    if [[ "${when}" == "AFTER" ]]; then
-        echo "Disk usage report AFTER housekeeping activities: "
-    elif [[ ${when} == "BEFORE" ]]; then
-        echo "Disk usage report BEFORE housekeeping activities: "
-    fi
+    log="${2}"
+    echo "*****************************************************" | tee --append "${log}"
     sleep 1
-    df -h
-    echo "*****************************************************"
+    if [[ "${when}" == "AFTER" ]]; then
+        echo "Disk usage report AFTER housekeeping activities: " | tee --append "${log}"
+    elif [[ ${when} == "BEFORE" ]]; then
+        curr=$(date)
+        export Greeter="Execution on ""${curr}"
+        echo "${Greeter}" >& "${log}" # Overwrite
+        echo "Disk usage report BEFORE housekeeping activities: " | tee --append "${log}"
+    fi
+    df -h >> "${log}" 2>&1 # Append
+    echo "*****************************************************" | tee --append "${log}"
 }
 
 
